@@ -1,0 +1,4 @@
+flask
+pathlib
+python-dotenv
+zoneinfo
