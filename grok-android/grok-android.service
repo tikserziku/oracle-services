@@ -1,0 +1,15 @@
+[Unit]
+Description=Grok Voice Android PWA
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/grok-voice
+ExecStart=/usr/bin/python3 /home/ubuntu/grok-voice/app_android.py
+Restart=always
+RestartSec=5
+Environment=PATH=/home/ubuntu/.local/bin:/usr/bin
+
+[Install]
+WantedBy=multi-user.target
