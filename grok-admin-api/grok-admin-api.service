@@ -1,0 +1,16 @@
+[Unit]
+Description=Grok Admin API Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/grok-voice
+ExecStart=/usr/bin/python3 /home/ubuntu/grok-voice/oracle-admin-api.py
+Restart=on-failure
+RestartSec=5
+Environment=FLASK_ENV=production
+Environment=PORT=5001
+
+[Install]
+WantedBy=multi-user.target
